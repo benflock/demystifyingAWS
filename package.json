@@ -1,0 +1,23 @@
+{
+  "name": "demystifying-aws",
+  "version": "1.0.0",
+  "description": "a quick demo of deploying to EC2",
+  "main": "app.js",
+  "scripts": {
+    "start": "node bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benflock/demystifyingAWS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benflock/demystifyingAWS/issues"
+  },
+  "homepage": "https://github.com/benflock/demystifyingAWS#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
