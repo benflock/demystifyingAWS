@@ -1,0 +1,10 @@
+div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(/tumblr_nzy5e1m7X91v2mrlqo1_500.gif);
+  background-size: contain;
+  background-position: center center;
+}
