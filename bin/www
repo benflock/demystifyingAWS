@@ -6,7 +6,7 @@
 
 var app = require('../app');
 var debug = require('debug')('demystifyingAWS:server');
-var https = require('https');
+var http = require('http');
 var fs = require('fs');
 
 /**
@@ -20,10 +20,7 @@ app.set('port', port);
  * Create HTTPs server.
  */
 
-var server = https.createServer({
-  cert: fs.readFileSync('/home/ubuntu/keys/awstour.com/fullchain.pem'),
-  key: fs.readFileSync('/home/ubuntu/keys/awstour.com/privkey.pem')
-}, app);
+var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
