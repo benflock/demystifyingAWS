@@ -10,13 +10,12 @@ const app = express();
 
 //middleware
 //redirect http to https
-app.use((req, res, next) => {
-    if (req.headers['x-forwarded-proto'] == 'http') {
-        return res.redirect(301, 'https://' + req.headers.host + '/');
-    } else {
-        return next();
-    }
-});
+app.all('*', (req, res, next) => {
+  if(req.secure){
+    return next();
+  };
+  res.redirect('https://' + req.hostname + req.url);
+})
 
 //routing
 app.use(express.static(path.join(__dirname, '/public')));
