@@ -11,10 +11,7 @@ const app = express();
 //middleware
 //redirect http to https
 app.all('*', (req, res, next) => {
-  if(req.secure){
-    return next();
-  }
-  res.redirect('https://' + req.hostname + req.url);
+    return req.secure ? next() : res.redirect('https://' + req.hostname + req.url)
 })
 
 //routing
