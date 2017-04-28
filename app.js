@@ -9,7 +9,14 @@ const app = express();
 //don't need it
 
 //middleware
-//meh
+//redirect http to https
+app.use((req, res, next) => {
+    if (req.headers['x-forwarded-proto'] == 'http') {
+        return res.redirect(301, 'https://' + req.headers.host + '/');
+    } else {
+        return next();
+    }
+});
 
 //routing
 app.use(express.static(path.join(__dirname, '/public')));
