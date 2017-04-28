@@ -21,8 +21,8 @@ app.set('port', port);
  */
 
 var server = https.createServer({
-  cert: '/home/ubuntu/keys/awstour.com/fullchain.pem',
-  key: '/home/ubuntu/keys/awstour.com/privkey.pem'
+  cert: fs.readFileSync('/home/ubuntu/keys/awstour.com/fullchain.pem'),
+  key: fs.readFileSync('/home/ubuntu/keys/awstour.com/privkey.pem')
 }, app);
 
 /**
