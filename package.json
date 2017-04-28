@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node bin/www",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "forever": "forever start app.js",
-    "again": "forever restart app.js",
+    "forever": "forever start bin/www",
+    "again": "forever restart bin/www",
     "stop": "forever stopall"
   },
   "repository": {
